@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Task - Task Manager</title>
+</head>
+<style>
+    /* Main Section Styling */
+    body{
+        display: flex;
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center; /* Center elements horizontally */
+        max-width: 600px; /* Limit the body width */
+        margin: 0 auto; /* Center the body horizontally */
+        background-color: #12417f; /* Dark background for the body */
+        color: #f7f3f3; /* Light text */
+        font-family: Arial, sans-serif;
+    }
+main {
+    padding: 20px;
+    min-height: calc(100vh - 115px); /* Full height excluding header */
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center elements horizontally */
+    border-radius: 8px; /* Rounded corners */
+
+}
+
+/* Task Form Styling */
+.task-form {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center elements horizontally */
+    max-width: 400px; /* Limit the form width */
+    margin: 0 auto; /* Center the form horizontally */
+    background-color: #2C2F33; /* Dark background for the form */
+    padding: 20px; /* Padding inside the form */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+}
+
+/* Input and Textarea Styling */
+.task-form input,
+.task-form textarea {
+    width: 100%; /* Full width for inputs */
+    padding: 12px; /* Padding inside inputs */
+    margin-bottom: 15px; /* Space between inputs */
+    border-radius: 5px; /* Rounded corners */
+    border: 1px solid #3319a4; /* Light border color */
+    font-size: 16px; /* Font size for inputs */
+}
+
+/* Textarea Specific Styling */
+.task-form textarea {
+    resize: none; /* Disable resizing of textarea */
+}
+
+/* Button Styling */
+.task-form button {
+    background-color: #7289DA; /* Button background color */
+    border: none; /* Remove default border */
+    color: white; /* Text color for button */
+    padding: 12px; /* Padding inside button */
+    text-transform: uppercase; /* Uppercase text for button */
+    letter-spacing: 1px; /* Space between letters in button text */
+    cursor: pointer; /* Pointer cursor on hover */
+    border-radius: 5px; /* Rounded corners for button */
+}
+
+.task-form button:hover {
+    background-color: #5A73C6; /* Darker shade on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+   .task-form {
+       width: 90%; /* Full width on smaller screens */
+   }
+
+   .task-form input,
+   .task-form textarea,
+   .task-form button {
+       font-size: 14px; /* Slightly smaller font size on mobile devices */
+   }
+}
+
+</style>
+<body>
+    <div class="container">
+        <header>
+            <h1>Add Task</h1>
+        </header>
+    </div>
+        <main>
+            <section class="task-form">
+                <form id="addTaskForm" onsubmit="addTask(); return false;">
+                    <input type="text" id="taskTitle" placeholder="Task Title" required>
+                    <textarea id="taskDescription" placeholder="Task Description" required></textarea>
+                    <button type="submit">Add Task</button>
+                    <a href="index.html">Back</a>
+                </form>
+                <a href="index.html">Back</a> 
+            </section>
+        </main>
+        <footer>
+            <p>&copy; 2024 Task Manager. All rights reserved.</p>
+        </footer>
+    </div>
+    <script src="/js/main.js"></script>
+</body>
+</html>
